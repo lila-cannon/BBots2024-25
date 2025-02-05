@@ -4,8 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.OpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
 
-@TeleOp(name = "realTestDrive")
-public class AutoDriveCommand extends OpMode {
+@TeleOp(name = "Does not work")
+public class AutoDriveCommand extends OpMode { //FIXMME: DOES NOT WORK
 
     final double TOLERANCE = 0.2; // Tolerance threshold for enabling strafing
     DcMotor frontLeft;
