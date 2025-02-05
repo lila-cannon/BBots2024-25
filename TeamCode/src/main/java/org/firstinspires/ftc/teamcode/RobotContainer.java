@@ -70,6 +70,9 @@ public class RobotContainer extends OpMode {
             }
         } else {
             drive.stop();
+            arm.stop();
+            recorder.giveCommand("drive.stop();");
+            recorder.giveCommand("arm.stop();");
         }
 
 
