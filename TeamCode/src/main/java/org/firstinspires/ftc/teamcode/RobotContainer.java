@@ -41,16 +41,19 @@ public class RobotContainer extends OpMode {
             gamepad1.rumble(250);
         }
 
-        if (gamepad1.left_stick_y != 0) {
-            drive.forward(gamepad1.left_stick_y);
-            recorder.giveCommand("drive.forward(" + gamepad1.left_stick_y + ");");
-        } else if (gamepad1.left_stick_x != 0) {
-            drive.right(gamepad1.left_stick_x);
-            recorder.giveCommand("drive.right(" + gamepad1.left_stick_x + ");");
-        } else if (gamepad1.right_stick_x != 0) {
-            drive.rotateRight(gamepad1.right_stick_x);
-            recorder.giveCommand("drive.rotateRight(" + gamepad1.right_stick_x + ");");
-        } else if (gamepad2.left_stick_y != 0) {
+//        if (gamepad1.left_stick_y != 0) {
+//            drive.forward(gamepad1.left_stick_y);
+//            recorder.giveCommand("drive.forward(" + gamepad1.left_stick_y + ");");
+//        } else if (gamepad1.left_stick_x != 0) {
+//            drive.right(gamepad1.left_stick_x);
+//            recorder.giveCommand("drive.right(" + gamepad1.left_stick_x + ");");
+//        } else if (gamepad1.right_stick_x != 0) {
+//            drive.rotateRight(gamepad1.right_stick_x);
+//            recorder.giveCommand("drive.rotateRight(" + gamepad1.right_stick_x + ");");
+//        } else
+        drive.fieldOrientatedDrive(gamepad1.left_stick_x, gamepad1.left_stick_y, gamepad1.right_stick_x);
+        
+        if (gamepad2.left_stick_y != 0) {
             arm.moveUp(gamepad2.left_stick_y);
             recorder.giveCommand("arm.moveUp(" + gamepad2.left_stick_y + ");");
         } else if (gamepad2.left_stick_button) {
